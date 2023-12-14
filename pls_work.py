@@ -6,7 +6,7 @@ import cv2.aruco as aruco
 cap = cv2.VideoCapture(0)
 
 while True:
-    [cameraMatrix, distCoeffs, reprojErr] = cv.calibrateCamera(objectPoints, imagePoints, imageSize)
+    [cameraMatrix, distCoeffs, reprojErr] = cv2.calibrateCamera(objectPoints, imagePoints, imageSize)
     ret, frame = cap.read()
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
